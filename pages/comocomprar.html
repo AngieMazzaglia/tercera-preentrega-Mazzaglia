@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
-    <header>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a> <!-- accesibilidad -->
+    <header class="site-header">
         <div class="container header-inner">
             <a href="../index.html">
-                <img class="logo" src="../assets/img/logo.png" alt="logo">
+                <img class="logo" src="../assets/img/logo.png" alt="Logo Revida">
             </a>
-            <nav aria-label="Principal">
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir menú"> <!-- Checkbox que controla el menú para mobile -->
+            <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true"></label> <!-- Ícono hamburguesa para mobile -->
+
+            <!-- Menú de navegación -->
+            <nav class="site-nav" aria-label="Principal">
                 <ul class="nav-list">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./nosotros.html">Nosotros</a></li>
@@ -24,11 +32,11 @@
         </div>
     </header>
 
-    <main>
+    <main id="contenido" tabindex="-1"> <!-- accesibilidad -->
         <!-- Intro -->
         <section class="bloque">
             <div class="container flow">
-                <h2>¿Cómo comprar?</h2>
+                <h1>¿Cómo comprar?</h1>
                 <p>En Revida comprar tus bolsas ecológicas es fácil y rápido. Podés elegir entre nuestros productos en stock o solicitar un pedido personalizado.</p>
             </div>
         </section>
@@ -40,7 +48,7 @@
                 <p>En ambos casos, el pedido mínimo de compra es de <strong>$10.000</strong>. Si no alcanzás ese monto, igual podés consultar por opciones combinadas.</p>
 
                 <h3>Métodos de pago</h3>
-                <p>Podés abonar con tarjeta de crédito, débito o transferencia bancaria. También aceptamos pagos mediante Mercado Pago y otras billeteras virtuales.</p>
+                <p>Podés abonar con tarjeta de crédito, débito o transferencia bancaria. También aceptamos pagosmediante Mercado Pago y otras billeteras virtuales.</p>
 
                 <h3>Envíos</h3>
                 <p>Realizamos envíos a todo el país.</p>
@@ -65,59 +73,62 @@
                 <h4>Cómo comprar bolsas en stock</h4>
                 <div class="steps">
                     <article class="step">
-                        <div class="ico" aria-hidden="true">🛒</div>
+                        <img class="ico" src="../assets/img/comocomprar1.png" alt="Carrito de compra">
                         <p>Ingresá a la sección Productos, seleccioná el que te interese, revisá sus características y agregalo al carrito.</p>
                     </article>
                     <article class="step">
-                        <div class="ico" aria-hidden="true">📦</div>
+                        <img class="ico" src="../assets/img/comocomprar2.png" alt="Caja de envío">
                         <p>Elegí la cantidad y calculá el envío.</p>
                     </article>
                     <article class="step">
-                        <div class="ico" aria-hidden="true">💳</div>
+                        <img class="ico" src="../assets/img/comocomprar3.png" alt="Tarjeta de crédito/débito">
                         <p>Completá los datos solicitados para concretar la compra, realizá el pago y ¡listo!</p>
                     </article>
                 </div>
-                <p class="derecha steps-cta"><a href="./productos.html" class="btn-verde">Ver todos los productos</a></p>
+                <p class="derecha steps-cta"><a href="./productos.html" class="btn-link">Ver todos los productos</a></p>
 
                 <h4>Cómo comprar bolsas personalizadas</h4>
-                    <div class="steps">
-                        <article class="step">
-                        <div class="ico" aria-hidden="true">🛍️</div>
+                <div class="steps">
+                    <article class="step">
+                        <img class="ico" src="../assets/img/comocomprar4.png" alt="Bolsas personalizadas">
                         <p>Ingresá a la sección Productos y seleccioná “Bolsas personalizadas”.</p>
-                        </article>
-                        <article class="step">
-                        <div class="ico" aria-hidden="true">✏️</div>
+                    </article>
+                    <article class="step">
+                        <img class="ico" src="../assets/img/comocomprar5.png" alt="Lápiz">
                         <p>Completá el formulario con tus datos y la información para tu pedido.</p>
-                        </article>
-                        <article class="step">
-                        <div class="ico" aria-hidden="true">📞</div>
+                    </article>
+                    <article class="step">
+                        <img class="ico" src="../assets/img/comocomprar6.png" alt="Hoja cotización">
                         <p>Recibí tu cotización, aprobá el diseño, realizá el pago y ¡listo!</p>
-                        </article>
-                    </div>
-                <p class="derecha steps-cta"><a href="./contacto.html" class="btn-verde">Hacer mi pedido personalizado</a></p>
+                    </article>
+                </div>
+                <p class="derecha steps-cta"><a href="./contacto.html" class="btn-link">Hacer mi pedido personalizado</a></p>
             </div>
         </section>
     </main>
+
+    <!-- footer -->
     <footer>
         <div class="container footer-grid">
-        <section class="footer-info">
-            <h4>Sobre nosotros</h4>
-            <p>Promovemos hábitos sustentables y el consumo responsable para un futuro más verde.</p>
-        </section>
+            <section class="footer-info">
+                <h4>Sobre nosotros</h4>
+                <p>Promovemos hábitos sustentables y el consumo responsable para un futuro más verde.</p>
+            </section>
 
-        <address class="footer-contacto">
-            <h4>Contacto</h4>
-            <p>Email: <a href="mailto:info@revida.com">info@revida.com</a></p>
-            <p>Tel: +54 11 1234-5678</p>
-        </address>
+            <address class="footer-contacto">
+                <h4>Contacto</h4>
+                <p>Email: <a href="mailto:info@revida.com">info@revida.com</a></p>
+                <p>Tel: +54 11 1234-5678</p>
+            </address>
 
-        <nav class="footer-social" aria-label="Redes sociales">
-            <h4>Seguinos</h4>
-            <a href="#">Instagram</a> |
-            <a href="#">Facebook</a>
-        </nav>
+            <nav class="footer-social" aria-label="Redes sociales">
+                <h4>Seguinos</h4>
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a>
+            </nav>
         </div>
         <p class="copy">© 2025 Revida — Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
