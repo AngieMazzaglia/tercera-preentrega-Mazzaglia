@@ -1,0 +1,76 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/*  HEADER + NAV  */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-4;
+    padding-block: 12px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Menú base */
+.nav-toggle {
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+
+    a {
+        padding: 4px 6px;
+        color: var(--c-brand);
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: var(--c-brand-dark);
+            text-decoration: underline;
+        }
+    }
+}
+
+nav a[aria-current="page"] {
+    color: var(--c-brand-dark);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* Botón hamburguesa (se muestra en mobile vía media query) */
+.nav-toggle-btn {
+    display: none;
+    @include flex-center;
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+    color: $brand-dark;
+    border: 1px solid $brand-soft;
+    border-radius: $radius-sm;
+    background: #fff;
+    cursor: pointer;
+    transition: background-color .3s ease;
+
+    &:hover {
+        background: $bg-soft;
+    }
+}

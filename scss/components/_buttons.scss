@@ -1,0 +1,54 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/extend" as *;
+@use "../base/animations" as *;
+
+/* Botones (unificados + compat Bootstrap) */
+a.btn,
+.btn,
+.btn-verde {
+    @include btn-base;
+}
+
+.btn-verde {
+    @extend %btn-filled;
+}
+
+.btn-success {
+    @extend %btn-filled;
+}
+
+.btn-verde:hover,
+.btn-success:hover {
+    background-color: #93cc96;
+    color: var(--c-brand-dark);
+    text-decoration: none !important;
+    animation: greenGlow .4s ease forwards;
+}
+
+.btn:focus-visible,
+a.btn:focus-visible,
+.btn-verde:focus-visible {
+    @include focus-ring(rgba(46, 125, 50, 0.35), 3px, 2px);
+}
+
+/* Botón subrayado */
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--c-brand);
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color .2s ease, text-decoration-thickness .2s ease;
+}
+
+.btn-link:hover {
+    color: var(--c-brand-dark);
+    text-decoration-thickness: 2px;
+}
+
+.btn-link:focus-visible {
+    @include focus-ring(rgba(46, 125, 50, 0.3), 2px, 2px);
+}

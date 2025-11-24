@@ -1,0 +1,39 @@
+/* base */
+:root {
+    --c-text: #2e2e2e;
+    --c-brand: #2e7d32;
+    --c-brand-dark: #1b5e20;
+    --c-brand-soft: #a5d6a7;
+    --c-bg: #ffffff;
+    --c-bg-soft: #e8f5e9;
+
+    --radius: 12px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --maxw: 1100px;
+}
+
+/* VARIABLES SASS */
+// Espaciados
+$space-1: 4px;
+$space-2: 8px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
+
+// Bordes
+$radius: 12px;
+$radius-sm: 8px;
+$radius-lg: 10px;
+
+// Colores
+$brand: #2e7d32;
+$brand-dark: #1b5e20;
+$brand-soft: #a5d6a7;
+$text-color: #2e2e2e;
+$bg-soft: #e8f5e9;

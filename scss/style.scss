@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// Módulos base y utilidades
+@use "abstracts/variables";
+@use "abstracts/maps";
+@use "abstracts/mixins";
+@use "abstracts/extend";
+
+// Estilos generales
+@use "base/generales";
+@use "base/animations";
+
+// Componentes
+@use "components/header";
+@use "components/footer";
+@use "components/buttons";
+
+// Secciones
+@use "sections/hero";
+@use "sections/cards";
+@use "sections/features";
+@use "sections/brands";
+@use "sections/form";
+@use "sections/steps";
+
+// Media queries
+@use "base/queries";

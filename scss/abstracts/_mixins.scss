@@ -1,0 +1,56 @@
+@use "./variables" as *;
+@use "./maps" as *;
+
+/* MIXINS */
+@mixin panel-base {
+    border-radius: $radius;
+    padding: $space-3;
+}
+
+@mixin panel-rounded-lg($padding) {
+    border-radius: $radius-lg;
+    padding: $padding;
+}
+
+@mixin btn-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: $radius-sm;
+    font-weight: 700;
+    line-height: 1;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin focus-ring($color, $width: 2px, $offset: 2px) {
+    outline: $width solid $color;
+    outline-offset: $offset;
+}
+
+@mixin sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+// Mixin para media queries basadas en el mapa de breakpoints
+@mixin respond($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}

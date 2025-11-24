@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $text-color;
+    background: var(--c-bg);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--c-brand);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* utilidades */
+.container {
+    max-width: var(--maxw);
+    margin-inline: auto;
+    padding-inline: $space-4;
+}
+
+.flow>*+* {
+    margin-top: var(--space-3);
+}
+
+.centrado {
+    text-align: center;
+}
+
+.derecha {
+    text-align: right;
+}
+
+.sr-only {
+    @include sr-only;
+}
+
+
+.btn-block-center {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+/* Secciones (bloques)  */
+.bloque {
+    padding-block: var(--space-6);
+    background: #fff;
+}
+
+.bloque-verde {
+    background: var(--c-bg-soft);
+}
+
+.bloque h2,
+.bloque h3 {
+    margin-top: 0;
+}
+
+/*  Grillas reutilizables (base) */
+.grid-3,
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+}
+
+/*  dos columnas (ej: nosotros)  */
+.cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-4;
+    text-align: left;
+}
+
+.col {
+    width: auto;
+    margin: 0;
+    display: block;
+}
+
+/*  Refuerzos de contenedor + skip link  */
+main .container,
+.bloque>.container {
+    max-width: var(--maxw);
+    margin-inline: auto;
+    padding-inline: $space-4;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: $radius-sm;
+}
+
+.skip-link:focus {
+    left: 8px;
+    top: 8px;
+    z-index: 999;
+}
